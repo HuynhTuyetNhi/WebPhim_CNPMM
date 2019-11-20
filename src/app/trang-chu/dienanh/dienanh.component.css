@@ -1,0 +1,97 @@
+.movie{
+    margin-top:100px;
+    margin-bottom:100px;
+    /* background: black; */
+    padding-top:100px;
+    padding-bottom:100px;
+}
+.movie h2{
+    font-family:'EB Garamond', serif;
+    padding-left:10px;
+    font-weight: bold;
+    color:white;
+    margin-bottom:50px;
+    text-align: center;
+    
+}
+.movie_iteam img{
+    width: 243px;
+    height: 317px;
+    position: relative;
+
+}
+.iteam_one {
+    margin-top:40px;
+}
+.overlay{
+    opacity: 0;
+}
+.overlay button{
+   background: red;
+} 
+.iteam_text_content{
+    position: absolute;
+    top: 199px;
+    text-align: center;
+    background: rgba(0,0,0,0.66);
+    color: beige;
+    width: 85.5%;
+    height: 33%;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    -o-transition: 0.5s all;
+}
+.iteam_one .iteam_text_content{
+    position: absolute;
+    top: 239px;
+    text-align: center;
+    background: rgba(0,0,0,0.66);
+    color: beige;
+    width: 85.5%;
+    height: 33%;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    -o-transition: 0.5s all;
+}
+.iteam_text_content:hover {
+    transform: translateY(-100px);
+    -webkit-transform: translateY(-100px);
+    -moz-transform: translateY(-100px);
+    -ms-transform: translateY(-100px);
+    -o-transform: translateY(-100px);
+    background: rgba(0,0,0,0.66);
+    /* padding-top: 46px; */
+    /* height: 89%; */
+    top: 100px;
+    padding-top: 100px;
+    padding-bottom: 215px;
+    border: 2px solid red;
+    
+}
+.iteam_one .iteam_text_content:hover{
+    transform: translateY(-100px);
+    -webkit-transform: translateY(-100px);
+    -moz-transform: translateY(-100px);
+    -ms-transform: translateY(-100px);
+    -o-transform: translateY(-100px);
+    background: rgba(0,0,0,0.66);
+    /* padding-top: 46px; */
+    /* height: 89%; */
+    top: 140px;
+    padding-top: 100px;
+    padding-bottom: 215px;
+    border: 2px solid red;
+}
+
+.iteam_text_content:hover .overlay{
+    opacity: 1;
+    transition: 2s all;
+    -webkit-transition: 2s all;
+    -moz-transition: 2s all;
+    -ms-transition: 2s all;
+    -o-transition: 2s all;
+}

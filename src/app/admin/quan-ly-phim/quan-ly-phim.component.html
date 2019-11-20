@@ -1,0 +1,204 @@
+
+<div class="manage">
+  <div class="info">
+    <div class="row content_header">
+      <div class="col-md-5 content_text">
+        <h1>Admin</h1>
+      </div>
+      <div class="col-md-7 content_info">
+        <!-- <p>
+              <span matBadge="4" matBadgeOverlap="false">Text</span>
+            </p> -->
+        <p>
+          <mat-icon matBadge="6" matBadgeColor="warn"><i class="fa fa-envelope-o"></i></mat-icon>
+        </p>
+        <p>
+          <mat-icon matBadge="10" matBadgeColor="warn"><i class="fa fa-bell-o"></i></mat-icon>
+        </p>
+        <p>
+            <mat-icon matBadge="7" matBadgeColor="warn">  <i class="fa fa-paper-plane-o"></i></mat-icon>
+          </p>
+          <p>
+            <span>Xin chào: {{filmname}} </span>
+          </p>
+          <div  *ngIf="change; else img" (click)="onchange()">
+            
+             </div>
+            <ng-template #img >
+              <button (click)="onchange()" class="icon mr-4"> <i class="fa fa-asterisk"></i></button>
+            </ng-template>
+
+      </div>
+    </div>
+  </div>
+  <div class="manage_content">
+    <div class="group ">
+       
+      <div *ngIf="change" class="iteam_one">
+       <div  *ngIf="change; else img" (click)="onchange()">
+        <button class="icon"><i class="fa fa-bars"></i></button>
+        <div #img class="overlay"></div>
+       </div>
+      <ng-template #img >
+        <button (click)="onchange()" class="icon"> <i class="fa fa-asterisk"></i></button>
+      </ng-template>
+        <!-- <i class="fa fa-asterisk"></i> -->
+        <img class="rounded-circle" src="../../../assets/img/1.jpg" />
+        <p class='text-left'> {{filmname}} </p>
+     <div class="search d-flex">
+        <input type="text" id="Search" placeholder="Search..." />
+        <!-- <button (click)="SearchCode()" class="btn btn-danger" ngModel="searchName">Tìm </button> -->
+        <button class="btn btn-danger" ngModel="searchName">Tìm </button>
+        
+     </div>
+     <div class="dash">
+       <h4>Dashboard</h4>
+     </div>
+     <div class="iteam_content">
+        <button mat-button [matMenuTriggerFor]="menu">Danh mục quản lí</button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item routerLink="/quanlinguoidung">Quản lí người dùng</button>
+          <button mat-menu-item routerLink="/quanliphim" >Quản lí phim</button>
+        </mat-menu>
+        <div class="chart">
+            <button mat-button [matMenuTriggerFor]="chart">Charts</button>
+            <mat-menu #chart="matMenu">
+                <button mat-menu-item>Người dùng</button>
+                <button mat-menu-item>Phim </button>
+              </mat-menu>
+        </div>
+     </div>
+    
+      </div>
+      <div class="iteam_two">
+        <div class="nav">
+            <div class="container">
+                <!-- Button to Open the Modal -->
+                <button type="button" class="btn btn-danger mt-4 mb-4 add-film"(click)="addfilm()" data-toggle="modal" data-target="#myModal">
+                    <i class="fa fa-plus"></i> Thêm phim
+                </button>
+               <div class="back">
+                <a class="pl-3" routerLink="/" >Trở về <i class="fa fa-home"></i></a>
+               </div>
+                <!-- <form>
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-addon"><i class="fa fa-search"></i></div>
+                      <input type="text" class="form-control" placeholder="Search" ng-model="searchName">
+                    </div>
+                  </div>
+                </form> -->
+              
+                <!-- The Modal -->
+                <div class="modal" id="myModal">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                    
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                          <!-- <h4 class="modal-title">Thêm phim</h4> -->
+                          <h4 class="modal-title" *ngIf="status ; else iteam">Thêm phim</h4>
+                          <ng-template #iteam>
+                            <h4>Sửa phim</h4>
+                          </ng-template>
+                            <!-- <h4 class="modal-title">Thêm người dùng</h4> -->
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                          <form #formAdd='ngForm' (ngSubmit)="ThemPhim(formAdd)">
+                            <div class="form-group">
+                              <label for="ma">Mã phim:</label>
+                              <input type="text"  class="form-control" id="MaPhim" placeholder="Nhập mã phim" ngModel name="maPhim">
+                            </div>
+                            <div class="form-group">
+                              <label for="ten">Tên phim:</label>
+                              <input type="text" class="form-control" id="TenPhim" placeholder="Nhập tên phim" ngModel name="tenPhim">
+                            </div>
+                            <div class="form-group">
+                                <label for="trailer">Trailer:</label>
+                                <input type="text" class="form-control" id="Trailer" ngModel placeholder="Nhập Trailer"  name="trailer">
+                              </div>
+                              <!-- <div class="form-group">
+                                  <label for="hinhanh">Hình ảnh:</label> -->
+                                  <!-- <input type="file" name="fileupload" value="fileupload" id="fileupload"> -->
+                                  <!-- <input type="file" formControlName="HinhAnh" (change)="onFileChange($event)"  class="form-control" id="HinhAnh" ngModel name="hinhAnh" value="hinhanh"> -->
+                                <!-- </div> -->
+                                <div class="form-group">
+                                    <label for="mota">Mô tả:</label>
+                                    <input type="text" class="form-control" id="MoTa" ngModel placeholder="Nhập mô tả"name="moTa">
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="nhom">Mã nhóm:</label>
+                                      <input type="text" class="form-control" id="MaNhom" ngModel placeholder="Nhập mã nhóm"name="maNhom">
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="ngay">Ngày khởi chiếu:</label>
+                                      <input type="text" class="form-control" id="NgayKhoiChieu" ngModel placeholder="Chọn ngày"name="ngayKhoiChieu">
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="danhgia">Đánh giá:</label>
+                                      <input type="text" class="form-control" id="DanhGia" ngModel placeholder="Nhập đánh giá"name="danhGia">
+                                    </div>
+                                   
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                          <!-- <button type="submit" class="btn btn-primary">Thêm</button> -->
+                          <button type="submit" *ngIf="status ; else update" name="submit" class="btn btn-primary" >Thêm</button>
+                          <ng-template #update>
+                              <button type="submit"name="submit" class="btn btn-primary" >Sửa</button>
+                          </ng-template>
+                           
+                        
+                          <!-- <button type="submit" name="submit" class="btn btn-primary">Thêm người dùng</button> -->
+                        <!-- <button type="button" class="btn btn-primary"(click)="ThemNguoiDung(TaiKhoan.value,MatKhau.value,Email.value,HoTen.value,SoDT.value,LoaiKH.value)">Thêm người dùng</button> -->
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                      </div>
+                           
+                          </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+        </div>
+          <div class="table_content">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Mã phim</th>
+                    <th>Tên phim</th>
+                    <th>Trailer</th>
+                    <th>Mô tả</th>
+                    <!-- <th>Mã nhóm</th> -->
+                    <th>Ngày khởi chiếu</th>
+                    <th>Đánh giá</th>
+                    <th>Hành động</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let phim of listPhim">
+                    <td>{{phim.MaPhim}}</td>
+                    <td>{{phim.TenPhim}}</td>
+                    <td>{{phim.Trailer}}</td>
+                    <!-- <td><img [src]="phim.HinhAnh" width="200px" height="200px" /></td> -->
+                    <!-- <td><img [src]="phim.HinhAnh" width="200px" height="200px" /></td> -->
+                    <td>{{phim.MoTa}}</td>
+                    <!-- <td>{{phim.MaNhom}}</td> -->
+                   <td>{{phim.NgayKhoiChieu | date:"dd/MM/yyyy" }} </td>
+                   <td>{{phim.DanhGia}}</td>
+                    <td>
+                      <button class="btn btn-success" (click)="XoaPhim(phim.MaPhim)" >Xóa</button>
+                      <button class="btn btn-danger"(click)="SuaPhim(phim.MaPhim,phim.TenPhim,phim.Trailer,phim.MoTa,phim.NgayKhoiChieu,phim.DanhGia)" data-toggle="modal" data-target="#myModal" >Sửa</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+      </div>
+    </div>
+  </div>
+
+</div>

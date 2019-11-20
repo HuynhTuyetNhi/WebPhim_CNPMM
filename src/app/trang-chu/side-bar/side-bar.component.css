@@ -1,0 +1,26 @@
+.icon_contact{
+    font-size:18px;
+    color: rgb(66, 165, 245);
+    margin-right:10px;
+    margin-top:10px;
+}
+.sidebar{
+    position: relative;
+    display:flex;
+}
+.image img{
+    position: absolute;
+    top: 0px;
+    right: 60px;
+    width: 439px;
+    height: 323px;
+}
+.form_contact{
+    padding-left:257px;
+}
+.form_contact input{
+    width: 228%;
+}
+.form_contact textarea{
+    width:228%;
+}

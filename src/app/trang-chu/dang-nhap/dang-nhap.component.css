@@ -1,0 +1,45 @@
+.form_login{
+    text-align: center;
+    padding-top:100px;
+    /* background-image: url('../../../assets/img/h28.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:600px; */
+}
+.form_login h2{
+    margin-bottom:50px;
+    color:black;
+    font-weight: bold;
+}
+.form-group{
+    margin-left: 410px;
+    padding: 5px 4px;
+    width: 32%;
+   
+}
+.form-control{
+    border-radius:40px;
+    -webkit-border-radius:40px;
+    -moz-border-radius:40px;
+    -ms-border-radius:40px;
+    -o-border-radius:40px;
+}
+.submit_content{
+    background: #3be8b0;
+}
+.submit_content:hover{
+    background: #ff4f81;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    -o-transition: 0.5s all;
+}
+.mk_iteam{
+    color:red;
+    padding-left:45px;
+}
+.mk_iteam:hover{
+    color: #3be8b0;
+}

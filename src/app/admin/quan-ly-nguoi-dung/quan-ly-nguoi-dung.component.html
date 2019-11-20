@@ -1,0 +1,195 @@
+
+<div class="manage">
+  <div class="info">
+    <div class="row content_header">
+      <div class="col-md-5 content_text">
+        <h1>Admin</h1>
+      </div>
+      <div class="col-md-7 content_info">
+        <!-- <p>
+              <span matBadge="4" matBadgeOverlap="false">Text</span>
+            </p> -->
+        <p>
+          <mat-icon matBadge="6" matBadgeColor="warn"><i class="fa fa-envelope-o"></i></mat-icon>
+        </p>
+        <p>
+          <mat-icon matBadge="10" matBadgeColor="warn"><i class="fa fa-bell-o"></i></mat-icon>
+        </p>
+        <p>
+          <mat-icon matBadge="7" matBadgeColor="warn"> <i class="fa fa-paper-plane-o"></i></mat-icon>
+        </p>
+        <p>
+          <span>Xin chào: {{nd}} </span>
+        </p>
+        <div *ngIf="change; else img" (click)="onchange()">
+
+        </div>
+        <ng-template #img>
+          <button (click)="onchange()" class="icon mr-4"> <i class="fa fa-asterisk"></i></button>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+  <div class="manage_content">
+    <div class="group ">
+      <!-- <button class="icon">☰</button> -->
+      <div *ngIf="change" class="iteam_one">
+        <div *ngIf="change; else img" (click)="onchange()">
+          <button class="icon"><i class="fa fa-bars"></i></button>
+          <div #img class="overlay"></div>
+        </div>
+        <ng-template #img>
+          <button (click)="onchange()" class="icon"> <i class="fa fa-asterisk"></i></button>
+        </ng-template>
+
+        <img class="rounded-circle" src="../../../assets/img/1.jpg" />
+        <p class='text-left'> {{nd}} </p>
+        <div class="search d-flex">
+          <input type="text" id="Search" placeholder="Search..." />
+          <button (click)="SearchCode()" class="btn btn-danger"> Tìm </button>
+          <!-- <i class="icon_search fa fa-search"></i> -->
+        </div>
+        <div class="dash">
+          <p>Dashboard</p>
+        </div>
+        <div class="iteam_content">
+          <button mat-button [matMenuTriggerFor]="menu">Danh mục quản lí</button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item routerLink="/quanlinguoidung">Quản lí người dùng</button>
+            <button mat-menu-item routerLink="/quanliphim">Quản lí phim</button>
+          </mat-menu>
+          <div class="chart">
+            <button mat-button [matMenuTriggerFor]="chart">Charts</button>
+            <mat-menu #chart="matMenu">
+              <button mat-menu-item>Người dùng</button>
+              <button mat-menu-item>Phim </button>
+            </mat-menu>
+          </div>
+        </div>
+
+      </div>
+      <div class="iteam_two">
+        <div class="nav">
+          <div class="container">
+            <!-- Button to Open the Modal -->
+            <button type="button" class="btn btn-danger mt-4 mb-4 add-user" (click)="addUser()" data-toggle="modal" data-target="#myModal">
+              <i class="fa fa-plus"></i> Thêm người dùng
+            </button>
+            <div class="back">
+                <a class="pl-3" routerLink="/" >Trở về <i class="fa fa-home"></i></a>
+               </div>
+
+            <!-- The Modal -->
+            <div class="modal" id="myModal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+
+                  <!-- Modal Header -->
+                  <div class="modal-header">
+                    <h4 class="modal-title" *ngIf="status ; else iteam">Thêm người dùng</h4>
+                    <ng-template #iteam>
+                      <h4>Sửa người dùng</h4>
+                    </ng-template>
+                    <!-- <h4 class="modal-title">Thêm người dùng</h4> -->
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+
+                  <!-- Modal body -->
+                  <div class="modal-body">
+                    <form #FormND="ngForm" (ngSubmit)="ThemNguoiDung(FormND)">
+                      <!-- <ng-template #up>
+                                <form #FormND ="ngForm" (ngSubmit)="SuaNguoiDung(FormND)">
+                            </ng-template> -->
+                      <!-- <form #FormND ="ngForm"(ngSubmit)="ThemNguoiDung(FormND)"> -->
+
+                      <div class="form-group">
+                        <label for="email">Tài khoản:</label>
+                        <input type="text" class="form-control" id="TaiKhoan" placeholder="Nhập tài khoản" ngModel name="taiKhoan">
+                      </div>
+                      <div class="form-group">
+                        <label for="pwd">Mật khẩu:</label>
+                        <input type="password" class="form-control" id="MatKhau" placeholder="Nhập mật khẩu" ngModel
+                          name="matKhau">
+                      </div>
+                      <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="Email" ngModel placeholder="Nhập Email" name="email">
+                      </div>
+                      <div class="form-group">
+                        <label for="email">Họ tên:</label>
+                        <input type="text" class="form-control" id="HoTen" ngModel placeholder="Nhập Họ tên" name="hoTen">
+                      </div>
+                      <div class="form-group">
+                        <label for="email">Số điện thoại:</label>
+                        <input type="text" class="form-control" id="SoDT" ngModel placeholder="Nhập số điện thoại" name="soDT">
+                      </div>
+                      <div class="form-group">
+                        <label for="email">Mã nhóm:</label>
+                        <input type="text" class="form-control" id="MaNhom" ngModel placeholder="Nhập mã nhóm" name="maNhom">
+                      </div>
+                      <div class="form-group">
+                        <label for="Loại người dùng">Loại người dùng:</label>
+                        <select ngModel name="MaLoaiNguoiDung" id="MaLoaiNguoiDung">
+                          <option value="KhachHang">Khách hàng</option>
+                          <option value="QuanTri">Quản trị</option>
+                        </select>
+                      </div>
+
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button type="submit" *ngIf="status ; else update" name="submit" class="btn btn-primary">Thêm</button>
+                        <ng-template #update>
+                          <button type="submit" name="submit" class="btn btn-primary">Sửa</button>
+                        </ng-template>
+
+
+                        <!-- <button type="submit" name="submit" class="btn btn-primary">Thêm người dùng</button> -->
+                        <!-- <button type="button" class="btn btn-primary"(click)="ThemNguoiDung(TaiKhoan.value,MatKhau.value,Email.value,HoTen.value,SoDT.value,LoaiKH.value)">Thêm người dùng</button> -->
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                      </div>
+
+                    </form>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="table_content">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Tài khoản</th>
+                <th>Mật khẩu</th>
+                <th>Email</th>
+                <th>Họ tên</th>
+                <th>Số ĐT</th>
+                <th>Mã loại</th>
+                <th>Hành động</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let nd of listNguoiDung ">
+                <td>{{nd.TaiKhoan}}</td>
+                <td>{{nd.MatKhau}}</td>
+                <td>{{nd.Email}}</td>
+                <td>{{nd.HoTen}}</td>
+                <td>{{nd.SoDT}}</td>
+                <td>{{nd.MaLoaiNguoiDung}}</td>
+                <td>
+                  <button class="btn btn-success" (click)="XoaND(nd.TaiKhoan)">Xóa</button>
+                  <button class="btn btn-danger" (click)="SuaND(nd.TaiKhoan,nd.MatKhau,nd.Email,nd.HoTen,nd.SoDT,nd.MaLoaiNguoiDung,nd.MaNhom)"
+                    data-toggle="modal" data-target="#myModal">Sửa</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

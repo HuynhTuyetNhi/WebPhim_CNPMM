@@ -1,0 +1,13 @@
+<div class="group_iteam_one container">
+      <div class="row">
+            <ng-container *ngFor="let phim of listPhim;let i = index">
+                  <div class="col-md-3">
+                        <app-iteam-phim [phimIteam]="phim"></app-iteam-phim>
+                  </div>
+            </ng-container>
+      </div>
+      <div class="detail">
+            <button routerLink="/phim" mat-button>All Films<i class="fa fa-angle-double-down"></i></button>
+      </div>
+
+</div>

@@ -1,0 +1,131 @@
+.seat{
+    text-align: center;
+    background-image: url('../../../assets/img/banner.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height:auto;
+    position: relative;
+    padding-bottom: 100px;
+}
+
+.seat_content h1{
+    color: white;
+    padding-top:50px;
+}
+
+.seat_iteam{
+    margin-top:15px;
+    position: relative;
+    padding-bottom: 55px;
+    padding-top:40px !important;
+   
+    
+}
+.seat_iteam button{
+    margin-left: -839px;
+}
+.group{
+    background: green;
+    width: 17px;
+    height: 16px;
+    /* padding: 20px 20px; */
+    position: absolute;
+    top: 99px;
+    left: 450px;
+
+}
+.group_one{
+    left:655px;
+    background: red;
+}
+.txt_cont p{
+    color:white;
+    margin-left: -403px;
+
+}
+.group_two{
+    left:847px;
+    background: #fff;
+    border: 2px solid #fff;
+}
+.txt_cont{
+    margin-left: -426px;
+    margin-top: 16px;
+}
+.txt_cont_two p{
+    margin-top: -41px;
+    margin-left: -409px;
+    color:white;
+}
+.txt_cont_three p{
+    margin-left: -45px;
+    margin-top: -40px;
+    color:white;
+}
+.seat_group{
+    margin-left:100px;
+}
+input{
+    width: 39px;
+    height: 33px;
+    border:6px solid coral ;
+    background: #fff ;
+}
+.seatGap{
+    padding-left: 50px;
+    
+}
+.movie{
+    margin-left: 20px;
+    margin-top: 100px;
+}
+.seatVGap{
+    height:44px;
+}
+.seat_iteam{
+    background:rgba(128, 128, 128, 0.34);
+    margin-left: 10px;
+    margin-right: 24px;
+    padding-top: 100px;
+}
+#seatsBlock td{
+    color:white;
+}
+.content_info{
+    position: absolute;
+    top: 0;
+    right: 18px;
+    margin-top: 114px;
+    height: 601px !important;
+    width: 290px;
+    color:white;
+    text-align: left;
+    padding-top:50px;
+    border: 1px solid white;
+    padding-left:30px;
+   
+    box-shadow: -5px -5px 5px #666 !important;
+    -moz-box-shadow: 5px 5px 5px #666;
+    -webkit-box-shadow: 5px 5px 5px #666;
+    margin-right: 5px;
+}
+.contact input{
+    width: 250px;
+}
+.pay p{
+    color:white;
+}
+input[_ngcontent-c2] {
+    width: 39px;
+    height: 33px;
+    border: 6px solid white;
+    background: #fff;
+}
+.price h1{
+    color:red;
+    font-weight: bold;
+}
+.list_arr{
+    margin-top:-46px;
+}

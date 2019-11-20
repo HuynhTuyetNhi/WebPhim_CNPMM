@@ -1,0 +1,108 @@
+
+
+      <div class="group_film">
+            <div class="iteam_content">
+                 <div class="img_content">
+                        <img src='http://localhost:8080/{{phimIteam.HinhAnh}}'/>
+                        <!-- <img src="http://localhost:8080/{phimIteam.HinhAnh}/> -->
+                        <div class="play_icon">
+                              <i class="fa fa-play"></i>
+                        </div>
+                        <div class="overlay"></div>
+                        <div class="hot">
+                              <p>C{{phimIteam.DanhGia}}</p>
+                        </div>
+                 </div>
+                  <div class="group">
+                        <div class="text_content">
+                              <h4>{{phimIteam.TenPhim}}</h4>
+                              <p> <i class="fa fa-calendar"></i> {{phimIteam.NgayKhoiChieu | date}}</p>
+                        </div>
+                        <div class="detail">
+                              <button  routerLink="/detail" [queryParams]="{maPhim: phimIteam.MaPhim , maNhom: phimIteam.MaNhom}" class="btn btn-danger">Mua vé</button>
+                         </div>
+                  </div>
+                 
+            </div>
+      </div>
+
+<!-- <div class="row group_one">
+            <div class="one_iteam col-md-3" >
+                  <img [src]="phimIteam.HinhAnh" />
+            </div>
+            <div class="one_iteam col-md-3">
+                  <img [src]="phimIteam.HinhAnh" />
+            </div>
+            <div class="one_iteam col-md-3">
+                  <img [src]="phimIteam.HinhAnh" />
+            </div>
+            <div class="one_iteam col-md-3">
+                  <img [src]="phimIteam.HinhAnh" />
+            </div>     
+            <div class="two_iteam col-md-4">
+                  <img [src]="phimIteam.HinhAnh" />
+            </div>
+            <div class="two_iteam col-md-4">
+                  <img [src]="phimIteam.HinhAnh" />
+            </div>
+            <div class="two_iteam col-md-4">
+                  <img [src]="phimIteam.HinhAnh" />
+            </div>
+  
+            <div class="one_iteam col-md-3">
+                  <img [src]="phimIteam.HinhAnh" />
+          </div>
+            <div class="one_iteam col-md-3">
+                  <img [src]="phimIteam.HinhAnh" />
+            </div>
+            <div class="one_iteam col-md-3">
+                  <img [src]="phimIteam.HinhAnh" />
+            </div>
+            <div class="one_iteam col-md-3">
+                 <img [src]="phimIteam.HinhAnh" />
+            </div>
+           
+  </div> -->
+
+<!-- phim đang chieu lap cai col-md-3 4  -->
+
+<!-- <div class="content">
+      <img [src]="phimIteam.HinhAnh"/>
+</div> -->
+
+
+<!-- <div class="row group_one">
+<div class="one_iteam col-md-3">
+      <img src="../../../assets/img/b8.jpg" />
+</div>
+<div class="one_iteam col-md-3">
+      <img src="../../../assets/img/b8.jpg" />
+</div>
+<div class="one_iteam col-md-3">
+      <img src="../../../assets/img/b8.jpg" />
+</div>
+<div class="one_iteam col-md-3">
+      <img src="../../../assets/img/b8.jpg" />
+</div>
+<div class="two_iteam col-md-4">
+      <img src="../../../assets/img/b8.jpg" />
+</div>
+<div class="two_iteam col-md-4">
+      <img src="../../../assets/img/b8.jpg" />
+</div>
+<div class="two_iteam col-md-4">
+      <img src="../../../assets/img/b8.jpg" />
+</div>
+<div class="one_iteam col-md-3">
+      <img src="../../../assets/img/b8.jpg" />
+</div>
+<div class="one_iteam col-md-3">
+      <img src="../../../assets/img/b8.jpg" />
+</div>
+<div class="one_iteam col-md-3">
+      <img src="../../../assets/img/b8.jpg" />
+</div>
+<div class="one_iteam col-md-3">
+      <img src="../../../assets/img/b8.jpg" />
+</div>
+</div> -->

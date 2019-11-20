@@ -1,0 +1,83 @@
+<div class="form_dk">
+  
+<div class="back ml-3 mt-3">
+    <button routerLink="/" mat-button><i class="fa fa-angle-left mr-4"></i>  Back!</button>
+  </div>
+<div class="form_login">
+    <h2>Register Now</h2>
+    <form #formDK="ngForm" (ngSubmit)="dangKy(formDK)" class="form-group-wrapper">
+      <div class="form-group">
+        <input type="text" #taiKhoan="ngModel" required minlength="3" maxlength="15" class="form-control" id="text" placeholder="Nhập tài khoản" ngModel name="taiKhoan">
+        <div *ngIf="taiKhoan.errors && (taiKhoan.touched || taiKhoan.dirty)">
+          <div class="alert alert-danger" *ngIf="taiKhoan.errors.required">
+            *Vui lòng nhập tài khoản
+          </div>
+          <div class="alert alert-danger" *ngIf="taiKhoan.errors.minlength">
+            *Vui lòng nhập nhiều hơn 3 kí tự
+          </div>
+          <div class="alert alert-danger" *ngIf="taiKhoan.errors.maxlength">
+              *Vui lòng nhập không quá 15 kí tự
+            </div>
+
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="password" #matKhau="ngModel" class="form-control"required id="pwd" placeholder="Nhập mật khẩu"ngModel name="matKhau">
+        <div *ngIf="matKhau.errors && (matKhau.touched || matKhau.dirty)">
+          <div class="alert alert-danger">
+            *Vui lòng nhập mật khẩu
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+          <input type="email" #email="ngModel" required class="form-control" id="email" placeholder="Nhập Email"ngModel name="email">
+          <div *ngIf="email.errors && (email.touched || email.dirty)">
+              <div class="alert alert-danger">
+                *Vui lòng nhập email
+              </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="text" #hoTen="ngModel" required class="form-control" id="hoTen" placeholder="Nhập Họ tên"ngModel name="hoTen"
+            [pattern]='"^[a-zA-Z_ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶ" +
+            "ẸẺẼỀỀẾỂưăạảấầẩẫậắằẳẵặẹẻẽềềếểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợ" +
+            "ụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\\s]+$"' />
+            <div *ngIf="hoTen.errors && (hoTen.touched || hoTen.dirty)">
+                <div class="alert alert-danger" *ngIf="hoTen.errors.required">
+                  *Vui lòng nhập họ tên
+                </div>
+                <div class="alert alert-danger" *ngIf="hoTen.errors.pattern" >
+                    *Vui lòng nhập họ tên hợp lệ
+                </div>
+              </div>
+            
+          </div>
+          <div class="form-group">
+              <input type="text" #SoDT="ngModel" required class="form-control" id="phone" placeholder="Nhập số điện thoại"ngModel name="soDT">
+              <div *ngIf="SoDT.errors && (SoDT.touched || SoDT.dirty)">
+                  <div class="alert alert-danger">
+                    *Vui lòng nhập số điện thoại
+                  </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="text" #maNhom="ngModel" required class="form-control" id="maNhom" placeholder="Nhập mã nhóm"ngModel name="maNhom">
+                <div *ngIf="maNhom.errors && (maNhom.touched || maNhom.dirty)">
+                    <div class="alert alert-danger">
+                      *Vui lòng nhập số mã nhóm
+                    </div>
+                  </div>
+              </div>
+              <div class="form-group select">
+                <!-- <label for="">Người dùng:</label> -->
+                <select name="MaLoaiNguoiDung" ngModel >
+                  <option value="KhachHang">Khách hàng</option>
+                </select>
+              </div>
+      <div class="form-group">
+          <input [disabled]="formDK.invalid" type="submit" class="form-control submit_content"  placeholder="submit" name="submit">
+        </div>
+        <a href="#" routerLink="/dangNhap" class="mk_iteam text-center">Đã có tài khoản</a>
+    </form>
+  </div>
+</div>

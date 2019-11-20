@@ -1,0 +1,107 @@
+.content_header{
+    background: rgb(66, 165, 245);
+    position: relative;
+}
+.over_content{
+    position: absolute;
+    top:0;
+    width:100%;
+    height:100%;
+    background: rgba(0, 0, 0, 0.36);
+}
+.group{
+    display: flex;
+}
+.icon{
+    position: absolute;
+    right: 10px;
+    top:10px;
+}
+.manage{
+    overflow: hidden;
+}
+.content_text h1{
+    font-family: 'Raleway', sans-serif;
+    color:white;
+    padding-left: 50px;
+}
+.content_info{
+    display: flex;
+    padding-left: 340px;
+    color:white;
+    padding-top:20px;
+    /* add */
+    right: -432px;
+}
+.content_info p{
+    margin-right:40px;
+    margin-top:20px;
+}
+.back{
+    float:right;
+    /* margin-right: 36px; */
+    margin-right: -266px;
+    margin-top: 26px;
+}
+.iteam_one{
+    background: rgba(128, 128, 128, 0.34);
+    height: auto;
+    padding-top: 75px;
+    position: relative;
+    padding-right: 55px;
+}
+.iteam_one img{
+    width: 100px;
+    height: 100px;
+    margin-left:10px;
+}
+.iteam_one p{
+    margin-left: 24px;
+    margin-top: 17px;
+}
+.search{
+    position: relative;
+}
+.icon_search{
+    position: absolute ;
+    left: 170px;
+    top: 7px;
+    font-size: 25px;
+}
+.search input{
+    padding: 5px 10px;
+    width: 100%;
+    margin-left: 10px;
+}
+.dash{
+    background: rgba(128, 128, 128, 0.34);
+    width: 94%;
+    padding: 0.5px;
+    margin-top:5px;
+    margin-left: 10px;
+}
+.dash h4{
+    font-size: 15px;
+    padding:10px;
+}
+
+.iteam_content button{
+    margin-top:10px;
+}
+.table_content th ,.table_content td{
+  font-size:13px;
+
+}
+.overlay{
+    position: absolute;
+    top:0;
+    width:100%;
+    height:100%;
+}
+.icon {
+   
+    background: red;
+}
+button.btn.btn-danger.mt-4.mb-4.add-film {
+    margin-left: -265px;
+}

@@ -1,0 +1,94 @@
+.txt_footer{
+    font-family:'EB Garamond', serif;
+    margin-bottom:40px;
+    letter-spacing: 5px;
+}
+.txt_footer span{
+    color: red;
+    text-shadow: 2px 2px 2px #cc0000;
+}
+.footer_content{
+    background-color: black;
+    /* padding: 30px 20px; */
+}
+.txt_footer h4{
+    padding-top:30px;
+}
+h4.text-center {
+    margin-left: -30px;
+}
+.iteam_one{
+    list-style: none;
+    margin-left: 140px;
+}
+.iteam_group h4{
+    font-size:25px;
+    font-family:'EB Garamond', serif;
+    /* font-weight: bold; */
+    letter-spacing: 2px;
+}
+.iteam_group p{
+    color:#808080;
+}
+.iteam_group p:hover{
+    color:white;
+}
+.iteam_one li
+{
+    margin-left: -39px;
+    color: #808080;
+    font-size: 15px;
+    letter-spacing: .5px;
+
+}
+.iteam_one li:hover{
+    color:white;
+    cursor: pointer;
+}
+.txt_email{
+    padding-right:135px;
+}
+.btn_email{
+    margin-left: -45px;
+    background-color: white;
+    border: none;
+}
+.email{
+    color:red;
+    background-color: transparent !important ; 
+}
+.icon i{
+    margin-right:10px;
+    margin-top:10px;
+}
+.icon i:first-child:hover{
+    color:blue;
+}
+.icon i:nth-child(2):hover{
+    color:rgb(66, 165, 245);
+}
+.icon i:nth-child(3):hover{
+    color: red;
+}
+.icon i:last-child:hover{
+    color: #609;
+}
+.iteam_content{
+    display: flex;
+   margin-left:150px;
+   margin-top:70px;
+    
+}
+.iteam_content p{
+    margin-right: 40px;
+    color: white !important ;
+    font-family:'EB Garamond', serif;
+    letter-spacing: 2px;
+  
+}
+.iteam_content span{
+    color: red ;
+}
+/* .lentop {display:none; bottom: 40%; right: 10px; cursor: pointer;  position: fixed; z-index: 1000;}
+.lentop div {background:crimson; border:2px solid #fff; border-radius:45px; padding:11px 12.5px; box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.3)}
+.lentop img {width:16px; height:16px;} */

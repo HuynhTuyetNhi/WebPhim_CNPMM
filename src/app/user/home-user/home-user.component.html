@@ -1,0 +1,108 @@
+
+  
+<div class="body_total">
+  <div class="nav_bar">
+    <nav class="main_nav navbar navbar-expand-sm navbar-dark">
+     
+      
+          <a class="navbar-brand logo" href="#">Movie Star</a>
+    
+  
+          <ul class="navbar-nav menu">
+            <li class="nav-item">
+              <a class="nav-link text_menu active" routerLink="/user" >Trang chủ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text_menu" routerLink="/phim" href="#">Phim</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text_menu" routerLink="/tintuc">Tin tức</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text_menu" routerLink="/lienhe">Liên hệ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text_menu" routerLink="/" href="#">Thoát</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text_menu" id='name'>Xin chào: <span>{{name}}</span></a>
+            </li>
+         
+           
+            <!-- <li class="Search">
+              <i  *ngIf="status ; else close" (click)="TimKiem()" data-toggle="collapse" data-target="#demo" class="Search_icon fa fa-search"></i>
+           
+        <div id="demo" *ngIf ="!status"  class="content collapse">
+        <span> Search...</span>
+      
+        </div>
+        <ng-template #close ><i (click)="TimKiem()" class="Search_icon fa fa-times"></i></ng-template> 
+      
+            </li> -->
+           
+          </ul>
+     
+    </nav>
+    <!-- <div class="text_content">
+      <h3>Welcome to my<span> Movie Star</span></h3>
+      <p>Don’t wait for the perfect moment, take the moment and make it perfect.</p>
+    </div> -->
+  
+    <div class="carousel_content">
+      <div id="carouselId" class="carousel slide" data-ride="carousel">
+        <ol class="arrow carousel-indicators">
+          <li data-target="#carouselId" data-slide-to="0" class="arrow_content active"></li>
+          <li data-target="#carouselId" class="arrow_content" data-slide-to="1"></li>
+          
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <div class="carousel-item active">
+          
+            <!-- <div class="carousel-caption d-none d-md-block"> -->
+            
+              <div class="text_content">
+                <h4>Move Star ...____________________</h4>
+                <h3>Welcome to my<span> Movie Star</span></h3>
+                <p>Don’t wait for the perfect moment, take the moment and make it perfect.</p>
+              </div>
+            <!-- </div> -->
+          </div>
+          <div class="carousel-item">
+            <!-- <div class="carousel-caption d-none d-md-block"> -->
+                <div class="text_content">
+                    <h4>Film action ...____________________</h4>
+                    <h3>Fim will be <span>bring happy</span> times</h3>
+                    <p>Don’t wait for the perfect moment, take the moment and make it perfect.</p>
+                  </div>
+            <!-- </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  <div class="body_phim">
+      <app-list-phim></app-list-phim>
+  </div>
+  <div class="review">
+      <app-review></app-review>
+  </div>
+  <div class="movie">
+      <app-dienanh></app-dienanh>
+  </div>
+  <div class="news">
+      <app-tintuc></app-tintuc>
+  </div>
+ <div class="contact">
+      <app-side-bar></app-side-bar>
+ </div>
+  <app-footer></app-footer>
+</div>
+
+<!-- <app-list-phim></app-list-phim>>
+<app-review></app-review>
+<app-dienanh></app-dienanh>
+<app-tintuc></app-tintuc>
+<app-side-bar></app-side-bar>
+<app-footer></app-footer> -->
+
+

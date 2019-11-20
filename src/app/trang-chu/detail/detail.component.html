@@ -1,0 +1,86 @@
+<app-menu></app-menu>
+
+<div class="detail_content">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="content_iteam">
+                <img src='http://localhost:8080/{{phim.HinhAnh}}'/>
+            </div>
+        </div>
+        <div class="col-md-5 text_detail">
+            <p>{{phim.NgayKhoiChieu | date:"fullDate" }}</p>
+            <h1>Tên phim: {{phim.TenPhim}}</h1>
+            <div class="trailer_content">
+                    <iframe width="400" height="200" [src]="phim.Trailer | safe" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <button class="btn btn-success mt-3">Mua vé</button>
+
+        </div>
+        <div class="col-md-3">
+            <div class="lds-roller">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="star">
+                <i class="icon_star fa fa-star"></i>
+                <i class="icon_star fa fa-star"></i>
+                <i class="icon_star fa fa-star"></i>
+                <p>10 người đã đánh giá</p>
+            </div>
+        </div>
+    </div>
+    <div class="table_content mt-4">
+        <div class="container">
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Ngày chiếu</th>
+                        <th>Giờ chiếu</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- <tr *ngFor="let suatchieu of phim.LichChieu"> -->
+                        <tr>
+                        <td>{{phim.NgayKhoiChieu | date:'dd-MM-yyyy'}}</td>
+                        <td>{{phim.datecreate | date: 'hh-mm'}}</td>
+                        <td>
+                            <button routerLink="/chitietphim" [queryParams]="{maPhim: phim.MaPhim,maNhom : phim.MaNhom}" class='btn btn-danger'>Đặt vé</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<!-- <img [src]="phim.HinhAnh">
+<h1>{{phim.TenPhim}}</h1>
+<iframe width="560" height="315" [src]="phim.Trailer | safe" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Ngày chiếu</th>
+            <th>Giờ chiếu</th>
+            <th>Hành động</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let suatchieu of phim.LichChieu">
+            <td>{{suatchieu.NgayChieuGioChieu | date:'dd-MM-yyyy'}}</td>
+            <td>{{suatchieu.NgayChieuGioChieu | date: 'hh-mm'}}</td>
+            <td>
+                <button class='btn btn-success'>Đặt vé</button>
+            </td>
+        </tr>
+    </tbody>
+</table> -->

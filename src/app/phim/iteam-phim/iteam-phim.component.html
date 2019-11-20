@@ -1,0 +1,9 @@
+<ng-container>
+ 
+  <div class="content_text mt-3">
+    <p>Tên phim : {{itemPhims.TenPhim}}</p>
+    <p>Ngày khởi chiếu : {{itemPhims.NgayKhoiChieu | date:"dd-MM-yyyy" }}</p>
+
+    <button routerLink="/detail"[queryParams]="{maPhim: itemPhims.MaPhim, maNhom: itemPhims.MaNhom}" class="btn btn-danger">Mua vé</button>
+  </div>
+</ng-container>

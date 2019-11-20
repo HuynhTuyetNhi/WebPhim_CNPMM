@@ -1,0 +1,25 @@
+.body_total{
+    overflow: hidden;
+}
+.body_phim{
+    /* margin-top:20px; */
+    /* margin-bottom:490px; */
+    /* padding:50px 50px; */
+    background-color: white;
+    overflow: hidden;
+}
+.contact{
+    background-color: rgb(66, 165, 245);
+    padding:50px 50px;
+}
+
+.contact_content{
+    margin-bottom:60px;
+}
+.mat-step-header .mat-step-icon-selected, .mat-step-header .mat-step-icon-state-done, .mat-step-header .mat-step-icon-state-edit {
+    background-color: rgb(66, 165, 245) !important ;
+    color: #fff;
+}
+.movie{
+    margin-bottom:500px;
+}

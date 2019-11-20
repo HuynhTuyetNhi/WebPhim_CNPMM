@@ -1,0 +1,9 @@
+.content_text{
+    margin-right:-235px;
+    /* margin-left:10px; */
+
+}
+.content_text p:first-child{
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}

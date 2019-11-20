@@ -1,0 +1,79 @@
+<div class="nav_bar">
+  <nav class="main_nav navbar navbar-expand-sm navbar-dark">
+   
+    
+        <a class="navbar-brand logo" href="#">Movie Star</a>
+  
+
+        <ul class="navbar-nav menu">
+          <li class="nav-item">
+            <a class="nav-link text_menu active" href="#">Trang chủ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text_menu" routerLink="/phim" href="#">Phim</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text_menu" routerLink="/tintuc">Tin tức</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text_menu" routerLink="/lienhe">Liên hệ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text_menu" routerLink="/dangNhap" href="#">Đăng nhập</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text_menu" routerLink="/dangKy" href="#">Đăng ký</a>
+          </li>
+         
+          <li class="Search">
+            <i  *ngIf="status ; else close" (click)="TimKiem()" data-toggle="collapse" data-target="#demo" class="Search_icon fa fa-search"></i>
+         
+      <div id="demo" *ngIf ="!status"  class="content collapse">
+      <span> Search...</span>
+    
+      </div>
+      <ng-template #close ><i (click)="TimKiem()" class="Search_icon fa fa-times"></i></ng-template> 
+    
+          </li>
+         
+        </ul>
+   
+  </nav>
+  <!-- <div class="text_content">
+    <h3>Welcome to my<span> Movie Star</span></h3>
+    <p>Don’t wait for the perfect moment, take the moment and make it perfect.</p>
+  </div> -->
+
+  <div class="carousel_content">
+    <div id="carouselId" class="carousel slide" data-ride="carousel">
+      <ol class="arrow carousel-indicators">
+        <li data-target="#carouselId" data-slide-to="0" class="arrow_content active"></li>
+        <li data-target="#carouselId" class="arrow_content" data-slide-to="1"></li>
+        
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+        
+          <!-- <div class="carousel-caption d-none d-md-block"> -->
+          
+            <div class="text_content">
+              <h4>Move Star ...____________________</h4>
+              <h3>Welcome to my<span> Movie Star</span></h3>
+              <p>Don’t wait for the perfect moment, take the moment and make it perfect.</p>
+            </div>
+          <!-- </div> -->
+        </div>
+        <div class="carousel-item">
+          <!-- <div class="carousel-caption d-none d-md-block"> -->
+              <div class="text_content">
+                  <h4>Film action ...____________________</h4>
+                  <h3>Fim will be <span>bring happy</span> times</h3>
+                  <p>Don’t wait for the perfect moment, take the moment and make it perfect.</p>
+                </div>
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+

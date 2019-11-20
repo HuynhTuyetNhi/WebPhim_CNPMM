@@ -1,0 +1,54 @@
+.film_iteam{
+    position: relative;
+}
+.img_iteam img{
+    width: 256px;
+    height: 281px;
+
+}
+.new_film{
+    position: absolute;
+    top:0;
+    right:0;
+    color:white;
+    background: red;
+    padding: 4px;
+    opacity: 1;
+}
+.overlay{
+    position: absolute;
+    top:0;
+    left:0;
+    background-color: rgba(12,27,54,0.52);
+    opacity: 1;
+    color:white;
+    transition: 1s ease;
+    height: 100%;
+    width: 102%;
+    opacity:0;
+}
+.film_iteam:hover .overlay{
+    opacity: 1;
+}
+.film_iteam:hover .new_film{
+    opacity: 0;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+}
+.text_content
+{
+    position: absolute;
+    top:100px;
+    left:70px;
+   
+}
+.text_content p:first-child{
+    font-family: 'Open Sans', sans-serif;
+    font-size:18px;
+}
+.text_content p:last-child{
+    color:#9da4aa;;
+}

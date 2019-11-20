@@ -1,0 +1,70 @@
+
+.logo{
+    font-size:30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    /* line-height: 4rem; */
+    color:black;
+}
+.main_nav{
+    padding:15px;
+    background: rgba(0, 2, 255, 0.08);
+}
+
+.menu{
+   margin-left:350px;
+   margin-top:20px;
+}
+
+.text_menu{
+    font-size:15px;
+    color:black !important;
+    /* margin-right:30px; */
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 1px;
+    /* word-spacing: 5px; */
+    margin-right:20px;
+
+}
+
+.text_menu:hover{
+  color:#e00231 !important;
+  transition: ease-in 0.25s;
+  -webkit-transition: ease-in 0.25s;
+  -moz-transition: ease-in 0.25s;
+  -ms-transition: ease-in 0.25s;
+  -o-transition: ease-in 0.25s;
+ 
+}
+.active{
+    color:#e00231 !important;
+    text-decoration-line: initial;
+    -moz-text-decoration-line: initial;
+}
+.Search{
+    font-size: 10px;
+    color: black;
+    background-color: #e00231;
+    padding: 10px;
+
+}
+.Search_icon{
+    font-size: 20px;
+}
+.content{
+    position: absolute;
+    bottom: -45px;
+    left: 115px;
+    border-style: outset;
+    /*padding: 6px;
+    */padding: 10px;
+    width:80%;
+    transition: ease-in-out 0.5s;
+    -webkit-transition: ease-in-out 0.5s;
+    -moz-transition: ease-in-out 0.5s;
+    -ms-transition: ease-in-out 0.5s;
+    -o-transition: ease-in-out 0.5s;
+}
+.content span{
+    font-size:16px;
+}

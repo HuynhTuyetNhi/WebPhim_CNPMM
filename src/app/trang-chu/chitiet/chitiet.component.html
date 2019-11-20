@@ -1,0 +1,40 @@
+<div class="detail_container">
+        <app-menu></app-menu>
+        <div class="content_iteam">
+            <div class="row">
+                <div class="col-md-5 img_cont">
+                    <img src='http://localhost:8080/{{phim.HinhAnh}}'/>
+                    <div class="overlay">
+                    </div>
+                    <div class="content_text">
+                        <h2>{{phim.TenPhim}}</h2>
+                        <p>Ngày khởi chiếu: {{phim.NgayKhoiChieu | date:'dd-MM-yyyy' }}</p>
+                    </div>
+                </div>
+                <div class="col-md-7 iteam_total">
+                   <div class="row">
+                       <div class="col-md-4"><p>Vé người lớn</p></div>
+                       <div class="col-md-4">{{value}}</div>
+                       <div class="col-md-4">
+                                    <span>{{num}}</span>
+                                    <div class="btn-group ml-4">
+                                      <button (click)="giam()" class="btn btn-info border-right">-</button>
+                                      <button (click)="tang()" class="btn btn-info border-left">+</button>
+                                    </div>
+                       </div>
+        
+                   </div>
+                   <div class="iteam_form">
+                        <p>Số tiền : {{tong}}</p>
+                        <button routerLink="/datghe" [queryParams]="{maPhim:phim.MaPhim,maNhom: phim.MaNhom}" class="btn btn-success">Đặt ghế</button>
+                    </div>
+                    <div class="note text-center">
+                        <p>Bạn không thể hủy hoặc thay đổi xuất chiếu đã mua</p>
+                        <h1> <i class="fa fa-phone"></i> + 0853771565</h1>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+</div>

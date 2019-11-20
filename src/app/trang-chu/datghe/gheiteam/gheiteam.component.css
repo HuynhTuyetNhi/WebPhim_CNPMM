@@ -1,0 +1,117 @@
+button{
+    width:38px;
+}
+
+
+/* 
+.seat_content h1{
+    color: white;
+    padding-top:50px;
+}
+
+.seat_iteam{
+    margin-top:15px;
+    position: relative;
+    padding-bottom: 55px;
+    padding-top:40px !important;
+   
+    
+}
+.seat_iteam button{
+    margin-left:-538px;
+}
+.group{
+    background: green;
+    width: 17px;
+    height: 16px;
+    position: absolute;
+    top: 99px;
+    left: 156px;
+
+}
+.group_one{
+    left:359px;
+    background: red;
+}
+.txt_cont p{
+    color:white;
+    margin-left: -143px;
+
+}
+.group_two{
+    left:568px;
+    background: #fff;
+    border: 2px solid #fff;
+}
+.txt_cont{
+    margin-left: -327px;
+    margin-top: 16px;
+}
+.txt_cont_two p{
+    margin-top: -41px;
+    margin-left: -61px;
+    color:white;
+}
+.txt_cont_three p{
+    margin-left: 348px;
+    margin-top: -40px;
+    color:white;
+}
+.seat_group{
+    margin-left:100px;
+}
+input{
+    width: 39px;
+    height: 33px;
+    border:6px solid coral ;
+    background: #fff ;
+}
+.seatGap{
+    padding-left: 50px;
+    
+}
+.seatVGap{
+    height:44px;
+}
+.seat_iteam{
+    background:rgba(128, 128, 128, 0.34);
+    margin-left: 230px;
+    margin-right:110px;
+    padding-top: 100px;
+}
+#seatsBlock td{
+    color:white;
+}
+.content_info{
+    position: absolute;
+    top: 0;
+    right: 0px;
+    height: 860px;
+    width: 290px;
+    color:white;
+    text-align: left;
+    padding-top:150px;
+    border: 1px solid white;
+    padding-left:30px;
+   
+    box-shadow: -5px -5px 5px #666 !important;
+    -moz-box-shadow: 5px 5px 5px #666;
+    -webkit-box-shadow: 5px 5px 5px #666;
+    margin-right: 5px;
+}
+.contact input{
+    width: 250px;
+}
+.pay p{
+    color:white;
+}
+input[_ngcontent-c2] {
+    width: 39px;
+    height: 33px;
+    border: 6px solid white;
+    background: #fff;
+}
+.price h1{
+    color:red;
+    font-weight: bold;
+} */

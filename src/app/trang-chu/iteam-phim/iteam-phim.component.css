@@ -1,0 +1,101 @@
+.iteam_content {
+    margin-bottom:80px;
+    position: relative;
+}
+.iteam_content {
+    width: 672%;
+}
+/* .text_content {
+    width: 72%;
+} */
+.group_film img
+{
+    /* width: 220px;
+    height: 282px; */
+    width: 239px;
+    height: 304px;
+    padding: 0.25rem;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -ms-transition-duration: 0.5s;
+    opacity:0.9;
+   
+}
+.hot p{
+    color:black;
+    background: red;
+    position: absolute;
+    top:10px;
+    left:10px;
+    padding:5px 5px;
+    border-radius:5px;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    -ms-border-radius:5px;
+    -o-border-radius:5px;
+}
+.play_icon{
+    opacity: 0;
+}
+.img_content:hover .play_icon{
+    opacity: 1;
+    position: absolute;
+    top:100px;
+    left:100px;
+    font-size:18px;
+    color:white;
+    border:solid white 2px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    padding:10px 10px;
+}
+.overlay{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 14%;
+    height: 78%;
+    background: linear-gradient(to top,#000,transparent 100%);
+    background-image: linear-gradient(to top, rgb(0, 0, 0), transparent 100%);
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+    opacity: 0;
+    border-radius: 0.25rem;
+}
+.group_film .img_content:hover .overlay{
+    opacity: 1;
+    transition: 0.25s;
+    -webkit-transition: 0.25s;
+    -moz-transition: 0.25s;
+    -ms-transition: 0.25s;
+    -o-transition: 0.25s;
+}
+.text_content{
+    margin-top:10px;
+    color:black;
+}
+.text_content h4{
+    font-family:'EB Garamond', serif;
+    font-weight: bold;
+    font-size:17px;
+    color:black;
+}
+.group{
+    height: 75px;
+}
+
+

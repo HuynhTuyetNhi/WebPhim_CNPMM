@@ -1,0 +1,19 @@
+<div class="film_iteam">
+  <div class="img_iteam">
+    <img src='http://localhost:8080/{{iteamPhim.HinhAnh}}'/>
+    
+    <!-- <img class="image" [src]="iteamPhim.HinhAnh"/> -->
+    <div class="new_film">
+      <p>New</p>
+    </div>
+  </div>
+  <div class="overlay">
+   <div class="text_content">
+      <p>{{iteamPhim.TenPhim}}</p>
+    <p>{{iteamPhim.NgayKhoiChieu | date}}</p>
+   </div>
+  </div>
+</div>
+<div class="detail mt-4">
+    <button routerLink="/detail"[queryParams]="{maPhim: iteamPhim.MaPhim, maNhom: iteamPhim.MaNhom}" mat-button>Mua vé</button>
+</div>
